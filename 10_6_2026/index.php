@@ -417,7 +417,130 @@ for ($i = 1; $i <= 5; $i++) {
     echo "<br>";
 }
 
+echo "<table border='1' cellpadding='3px' cellspacing='0px'>";
 
+for ($i = 1; $i <= 9; $i++) {
+
+   echo "<tr>";
+
+    for ($j = 1; $j <= 9; $j++) {
+
+
+        echo "<td>" . $i . " * " .$j . " = " . $i *$j . "</td>";
+
+
+
+
+    }
+
+    echo "</tr>";
+
+
+
+
+}
+echo "</table>";
+
+
+
+
+
+$string = "hello world from php";
+
+// a. Convert the string to uppercase
+echo "Uppercase: " . strtoupper($string) . "<br>";
+
+// b. Convert the string to lowercase
+echo "Lowercase: " . strtolower($string) . "<br>";
+
+// c. Make the first letter of the string uppercase
+echo "First letter uppercase: " . ucfirst($string) . "<br>";
+
+// d. Make the first letter of each word uppercase
+echo "Each word capitalized: " . ucwords($string) . "<br>";
+
+
+
+
+
+
+$string = "085119"; 
+
+$string = "085119";
+
+$hours = substr($string, 0, 2);
+$minutes = substr($string, 2, 2);
+$seconds = substr($string, 4, 2);
+
+echo $hours . ":" . $minutes . ":" . $seconds;      
+
+    echo "<br>";
+    echo "<br>";
+
+$sentence = "I am a full stack developer at orange coding academy";
+$word = "Orange";
+
+
+if(stripos($string, $sentence) != false) {
+    echo " its found ";
+
+
+}else{
+
+echo " Not  found ";
+
+}
+
+$url = "file:///C:/Users/Orange/Desktop/PHP_task.pdf";
+
+$url2 = "www.orange.com/index.php";
+
+  echo "<br>";
+
+
+    echo "<br>";
+
+echo basename($url);
+  echo "<br>";
+
+echo basename($url2);
+
+
+
+$email = "info@orange.com";
+
+$email  = strstr($email,"." , true);
+
+
+  echo "<br>";
+
+
+  echo ($email);
+
+echo "<br>";
+
+
+
+
+
+$sentence = "Our new trainee is so genius.";
+$word = "the";
+
+$result = preg_replace('/^\S+/', $word, $sentence);
+
+echo $result;
+
+
+
+$characters = "1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+
+$password = "";
+
+for ($i = 0; $i < 8; $i++) {
+    $password .= $characters[random_int(0, strlen($characters) - 1)];
+}
+
+echo $password;
 
 
 
